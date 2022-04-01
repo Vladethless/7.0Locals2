@@ -1,0 +1,154 @@
+/*
+* ------------------------------------------------------------------------------
+* Porfolio section
+* ------------------------------------------------------------------------------
+*/
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+
+	.item {
+		position: relative;
+		height: 400px;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.overlay {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			flex-direction: column;
+			transition: opacity 0.5s;
+
+			&:not(.active) {
+				opacity: 0;
+			}
+
+			&-text {
+				position: relative;
+				z-index: 1;
+				letter-spacing: 1px;
+
+				p {
+					margin-bottom: 0;
+				}
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				background-color: rgba($black, 0.8);
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+
+			.preview-btn {
+				position: absolute;
+				z-index: 1;
+				right: 0;
+				bottom: 0;
+				width: 50px;
+				height: 50px;
+				line-height: 55px;
+				font-size: 18px;
+				padding: 0;
+				text-decoration: none;
+				transition: all 0.5s;
+			}
+		}
+	}
+
+	&.v-01 {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(300px, 1fr));
+		grid-template-rows: repeat(2, 400px);
+		overflow: hidden;
+
+		.item {
+			flex-direction: column;
+			flex-grow: 0;
+			float: left;
+
+			&:first-of-type {
+				height: 800px;
+				width: 100%;
+				grid-column: 1 / span 2;
+				grid-row: 1 / span 2;
+
+				.overlay {
+					opacity: 1;
+
+					.preview-btn {
+						width: 80px;
+						height: 80px;
+						line-height: 85px;
+						font-size: 22px;
+					}
+
+					&::before {
+						background-color: rgba($black, 0.7);
+					}
+
+					h5 {
+						font-size: 32px;
+					}
+				}
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			grid-template-columns: repeat(2, minmax(300px, 1fr));
+			grid-template-rows: repeat(4, 400px);
+		}
+
+		@include media-breakpoint-down(sm) {
+			grid-template-columns: repeat(1, 100%);
+			grid-template-rows: repeat(6, 400px);
+
+			.item:first-of-type {
+				grid-column: 1 / -1;
+			}
+		}
+	}
+
+	&.v-02 {
+		.item {
+			flex: 0 0 25%;
+			padding: 50px;
+			cursor: pointer;
+
+			.overlay {
+				position: relative;
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			.item {
+				padding: 25px;
+				flex: 0 0 50%;
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			.item {
+				padding: 25px;
+				flex: 0 0 100%;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,28 @@
+/*
+* -------------------------------------------------------------
+* Newsletter Section
+* -------------------------------------------------------------
+*/
+.newsletter-section {
+	background-size: cover;
+
+	.form-inline {
+		position: relative;
+		input {
+			width: 100%;
+			border: 0;
+			outline: 0;
+			border-bottom: 1px solid $white;
+			background: transparent;
+		}
+
+		::placeholder {
+			color: $white;
+		}
+
+		button {
+			position: absolute;
+			right: 0;
+		}
+	}
+}

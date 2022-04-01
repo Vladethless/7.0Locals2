@@ -1,0 +1,78 @@
+/*
+* -----------------------------------------------------------------
+* styling for company news section
+* -----------------------------------------------------------------
+*/
+
+.company-news-section {
+	&.v-03 {
+		background: $gray-100;
+	}
+
+	&.v-02 {
+		background-color: $gray-100;
+
+		.date-header {
+			background: rgba($black, 0.9);
+		}
+	}
+
+	.img-wrapper {
+		position: relative;
+
+		a {
+			img {
+				width: 100%;
+				height: auto;
+				min-height: 300px;
+
+				@include media-breakpoint-down(md) {
+					width: 100%;
+					object-position: center;
+					object-fit: cover;
+				}
+			}
+		}
+
+		span {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 10px 20px;
+			color: $white;
+			font-size: 16px;
+		}
+	}
+
+	.news-content {
+		.date-header {
+			background: #222;
+			padding: 15px;
+			font-size: 12px;
+		}
+
+		.news-body {
+			position: relative;
+			max-width: 100%;
+			height: auto;
+
+			p {
+				line-height: 1.8;
+				font-size: 13px;
+				word-wrap: break-word;
+			}
+
+			h5 a:hover {
+				color: theme-color("primary") !important;
+				text-decoration: none;
+				transition: 0.5s;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		.icons-scroll {
+			margin: 20px 0;
+		}
+	}
+}

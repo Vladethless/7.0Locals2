@@ -1,0 +1,60 @@
+/*
+* ----------------------------------------------------------------------------
+* Cleaning service footer
+* ----------------------------------------------------------------------------
+*/
+
+.main-footer {
+	&.v-02 {
+		background: rgba($black, 0.9);
+		font-size: 12px;
+		line-height: 24px;
+		vertical-align: center;
+
+		.company-img-container {
+			img {
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		.media-body {
+			p {
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+		}
+
+		a {
+			color: $gray-500;
+
+			&:hover {
+				color: theme-color("primary-blue");
+			}
+		}
+
+		.footer-titles {
+			display: flex;
+			margin-bottom: 40px;
+
+
+			span {
+				font-size: 18px;
+				position: relative;
+				display: block;
+				line-height: 1;
+
+				&::after {
+					content: "";
+					width: 30px;
+					height: 2px;
+					background-color: theme-color("primary-blue");
+					position: absolute;
+					right: -60px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+}

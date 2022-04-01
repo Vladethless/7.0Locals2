@@ -1,0 +1,93 @@
+/*
+* ----------------------------------------------------------------------------
+* Plumber page - footer section
+* ----------------------------------------------------------------------------
+*/
+
+.main-footer.v-03 {
+	position: relative;
+	background: linear-gradient(to right, #222 0%, #222 calc(50% - 200px), #2a2a2a calc(50% - 200px), #2a2a2a 100%);
+	padding: 0;
+
+	.footer {
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		&-nav {
+			margin-bottom: 0;
+
+			li {
+				&:not(:last-child) {
+					margin-right: 25px;
+				}
+
+				a {
+					&:hover {
+						color: theme-color("primary");
+					}
+				}
+			}
+		}
+	}
+
+	.sub-footer {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background: #000;
+
+		li {
+			a {
+				color: #7e7e7e;
+				&.active {
+					color: $white;
+				}
+
+				&:hover {
+					color: $success;
+				}
+			}
+		}
+
+	}
+
+	.socials {
+		display: flex;
+		flex-wrap: wrap;
+
+		&-icon {
+			height: 45px;
+			width: 45px;
+			font-size: 14px;
+			background-color: rgba($white, 0.1);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			transition: all 0.4s;
+
+			i {
+				margin: 0 !important;
+			}
+
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+
+			&:hover {
+				background: theme-color("primary-green");
+			}
+
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		background: #2a2a2a;
+	}
+
+	@include media-breakpoint-down(sm) {
+		.footer-nav {
+			margin-bottom: 20px;
+		}
+	}
+}

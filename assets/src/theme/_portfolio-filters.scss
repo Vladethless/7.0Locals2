@@ -1,0 +1,52 @@
+/*
+* ------------------------------------------------------------------------------
+* Portfolio filter buttons
+* ------------------------------------------------------------------------------
+*/
+.filter {
+	display: flex;
+	flex-wrap: wrap;
+
+	&.v-02 {
+		background-color: $gray-200;
+	}
+
+	& &-btn {
+		display: inline-block;
+		padding: 10px 15px;
+		font-weight: 500;
+		transition: all 0.5s;
+		background-color: $white;
+
+		&:hover,
+		&.filter-btn-control-active {
+			background-color: theme-color("primary");
+			cursor: pointer;
+			box-shadow: 0 2px 5px rgba($black, 0.1);
+			color: $white;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		box-shadow: none;
+		width: 100%;
+
+		.filter-btn {
+			flex: 0 0 20%;
+			box-shadow: 0 1px 2px rgba($secondary, 0.08);
+		}
+
+		&.v-02 {
+			background-color: $white;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		& &-btn {
+			flex: 0 0 auto;
+		}
+	}
+}

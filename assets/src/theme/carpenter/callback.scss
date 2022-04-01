@@ -1,0 +1,53 @@
+/*
+* ----------------------------------------------------------------------------
+* carpenter page - callback section
+* ----------------------------------------------------------------------------
+*/
+
+.call-back-section {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	.container {
+		position: relative;
+		overflow-y: visible;
+	}
+
+	@include media-breakpoint-up(lg) {
+		.main-img {
+			position: absolute;
+			right: 0;
+			top: -102px;
+			bottom: 0;
+			width: auto;
+			display: block;
+		}
+
+		.row > div {
+			height: 100%;
+			position: static;
+		}
+	}
+
+	@include media-breakpoint-only(lg) {
+		.main-img {
+			position: absolute;
+			top: auto;
+			bottom: -100px;
+			width: auto;
+			display: block;
+			right: -30px;
+		}
+	}
+
+
+	@include media-breakpoint-down(md) {
+		padding: 80px 0 0;
+		overflow: hidden;
+
+		.left-container {
+			margin-bottom: 80px;
+		}
+	}
+}

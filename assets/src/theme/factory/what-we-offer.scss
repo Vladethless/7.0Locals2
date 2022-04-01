@@ -1,0 +1,96 @@
+/*
+* ----------------------------------------------------------------------------
+* factory page - what we offer section
+* ----------------------------------------------------------------------------
+*/
+
+.what-we-offer-section {
+	position: relative;
+	width: 100%;
+
+	&::after {
+		position: absolute;
+		content: "";
+		background: url(../../placeholder-imgs/placeholder-dark.svg);
+		z-index: -1;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 50%;
+	}
+
+	.container {
+		img {
+			position: relative;
+			z-index: 1;
+			transition: transform 0.6s;
+			width: 100%;
+		}
+
+		.row > [class^="col-"] {
+
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				z-index: 0;
+				top: 0;
+				bottom: -4px;
+				left: 0;
+				right: 0;
+				background-color: $white;
+				box-shadow: 0 0 30px rgba($black, 0.4);
+				transition: all 0.5s;
+				opacity: 0;
+			}
+
+			&:hover {
+				z-index: 5;
+
+				&::before {
+					opacity: 1;
+					transform: scale(1.08);
+				}
+
+				.content {
+					img {
+						transform: scale(1.05);
+					}
+				}
+			}
+		}
+
+		.content {
+			margin: 1px;
+			position: relative;
+			height: 100%;
+			overflow: hidden;
+
+			a {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				text-align: center;
+				font-size: 15px;
+				font-weight: 600;
+				background: rgba($black, 0.8);
+				padding: 20px;
+				transition: all 0.5s;
+				z-index: 2;
+				color: $white;
+
+				&:hover {
+					text-decoration: none;
+					color: theme-color("primary");
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,218 @@
+/*
+* ----------------------------------------------------------------------------
+* Portfolio section - Cleaning services
+* -----------------------------------------------------------------------------
+*/
+
+.works-section {
+	&.v-02 {
+		.container {
+			position: relative;
+		}
+
+		.top-work-img {
+			position: absolute;
+			top: -15%;
+			right: 50%;
+			transform: translateX(50%);
+			overflow: hidden;
+		}
+
+		.section-header {
+			position: relative;
+			z-index: 100;
+			font-weight: 200;
+		}
+
+		.carousel {
+			position: relative;
+
+			.carousel-inner {
+				width: 100%;
+
+				.carousel-item {
+					position: relative;
+
+					.item__third:last-child,
+					.item__third:first-child {
+						width: 20%;
+
+						@include media-breakpoint-down(md) {
+							display: none;
+						}
+					}
+
+					.item__third:nth-child(2) {
+						width: 60%;
+						height: 360px;
+
+						@include media-breakpoint-down(md) {
+							width: 100%;
+						}
+
+						img {
+							height: 100%;
+							object-fit: cover;
+							object-position: center;
+						}
+					}
+
+					.item__third:last-child img,
+					.item__third:first-child img {
+						margin-top: 20%;
+						height: 250px;
+						object-fit: cover;
+						object-position: center;
+					}
+				}
+			}
+
+			.item__third {
+				float: left;
+				position: relative;
+				width: 33.33333333%;
+				padding-right: 10px;
+				height: 360px;
+
+				img {
+					object-fit: cover;
+					object-position: center;
+					height: 100%;
+					max-width: 100%;
+					border-style: none;
+					vertical-align: middle;
+				}
+			}
+
+			.controllers {
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 40px;
+
+				.left,
+				.right {
+					color: $gray-300;
+
+					img {
+						height: 40px;
+						filter: invert(68%) sepia(97%) saturate(1%) hue-rotate(22deg) brightness(105%) contrast(101%);
+					}
+
+					&:hover {
+						color: theme-color("primary-blue");
+						transition: 0.6s;
+
+						img {
+							filter: invert(85%) sepia(12%) saturate(6864%) hue-rotate(170deg) brightness(93%) contrast(95%);
+						}
+					}
+				}
+			}
+
+			@include media-breakpoint-up(md) {
+				.bottom-title {
+					margin-top: -50px;
+				}
+			}
+
+			@include media-breakpoint-down(sm) {
+				.controllers {
+					margin-bottom: 30px;
+				}
+			}
+		}
+
+		.slider-nav {
+			position: relative;
+
+			.slick-slider {
+				padding-left: 70px;
+				padding-right: 70px;
+			}
+
+			.nav-btn {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				color: $gray-500;
+				text-decoration: none;
+				z-index: 1;
+				display: flex;
+				align-items: center;
+				line-height: 1;
+
+				i {
+					font-size: 42px;
+				}
+
+				&:hover {
+					color: theme-color("primary-blue");
+				}
+
+				&-next {
+					right: 0;
+				}
+
+				&-prev {
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+// How It Works Section
+
+.how-works-section {
+
+	.icon-wrapper {
+		width: 80px;
+		height: 80px;
+		font-size: 32px;
+		line-height: 40px;
+		text-align: center;
+		display: block;
+		border-radius: 50%;
+		overflow: hidden;
+		padding: 20px;
+		margin: 0 0 30px 0;
+		border: 2px solid theme-color("primary-blue");
+		color: theme-color("primary-blue");
+
+		&:hover {
+			background: theme-color("primary-blue");
+			color: $white !important;
+			transition: 0.5s;
+			cursor: pointer;
+
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+
+	h5 {
+		font-weight: 600;
+	}
+
+	@include media-breakpoint-up(md) {
+		li:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+
+	@include media-breakpoint-only(md) {
+		.media-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				flex: 0 50%;
+				margin-right: 0;
+				padding-right: 20px;
+			}
+		}
+	}
+}

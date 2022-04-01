@@ -1,0 +1,97 @@
+/*
+* ------------------------------------------------------------------------------
+* styling for notFound page
+* ------------------------------------------------------------------------------
+*/
+
+.not-found-section {
+	position: relative;
+	padding-top: 280px;
+	padding-bottom: 100px;
+	min-height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.info-container {
+		width: 80%;
+		margin: 0 auto;
+		line-height: 1;
+		text-align: center;
+
+		.title {
+			&-error {
+				font-size: 42px;
+				text-transform: uppercase;
+			}
+
+			&-number {
+				color: $primary;
+				font-size: 160px;
+				font-weight: 800;
+				letter-spacing: -25px;
+				line-height: 1;
+				margin-bottom: 0;
+			}
+		}
+
+		.subtitle-error {
+			font-size: 24px;
+		}
+
+		.info {
+			margin: 40px 0;
+
+			p {
+				color: #eee;
+				font-size: 15px;
+				margin-bottom: 0;
+				line-height: 1.5;
+			}
+		}
+
+		.search-form {
+			width: 370px;
+			margin: 0 auto;
+
+			fieldset {
+				position: relative;
+				background-color: transparent;
+				border: 1px solid rgba($secondary, 0.2);
+
+				.form-control {
+					padding: 10px;
+					background: transparent;
+
+					&::placeholder {
+						color: #bababa;
+						opacity: 0.8;
+					}
+
+				}
+
+				button {
+					position: absolute;
+					right: 0;
+					border: none;
+					background: none;
+					color: theme-color("primary");
+					padding: 15px;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		background-position: center right;
+
+		.info-container {
+			width: 100%;
+			padding: 10px;
+
+			.search-form {
+				width: 100%;
+			}
+		}
+	}
+}

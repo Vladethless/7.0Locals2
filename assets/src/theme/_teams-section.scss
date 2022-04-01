@@ -1,0 +1,56 @@
+/*
+* ------------------------------------------------------------------------------
+* Our Team
+* ------------------------------------------------------------------------------
+*/
+
+.team-section {
+	overflow: hidden;
+
+	.card {
+		cursor: pointer;
+
+		&.v02 {
+			&:hover .card-footer {
+				background: $success !important;
+			}
+		}
+
+		&:hover .card-footer {
+			background: theme-color("primary") !important;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+	}
+
+	.card-body {
+		background: $gray-100;
+		height: 100px;
+
+		.card-title {
+			font-weight: 600;
+		}
+
+		.card-text {
+			font-weight: 600;
+			margin: 0;
+			line-height: 1;
+		}
+	}
+
+	.plumber-team--header {
+		justify-content: space-between;
+	}
+
+	@include media-breakpoint-down(sm) {
+		.section-header {
+			margin-bottom: 30px;
+		}
+
+		.plumber-team--header {
+			text-align: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+}

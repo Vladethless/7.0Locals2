@@ -1,0 +1,386 @@
+/*
+* -----------------------------------------------------------------
+* Default navbar styles
+* -----------------------------------------------------------------
+*/
+
+.navbar {
+
+	.cart-btn {
+		font-size: 16px;
+		padding: 5px;
+		text-decoration: none;
+		text-align: center;
+		display: flex;
+		border-radius: 50%;
+		transition: all 0.6s;
+		position: relative;
+		color: $white;
+
+		> i {
+			position: relative;
+			z-index: 1;
+		}
+
+		&::before {
+			content: "";
+			width: 40px;
+			height: 40px;
+			display: block;
+			position: absolute;
+			border-radius: 50%;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -55%);
+			transition: all 0.5s;
+			z-index: 0;
+		}
+
+		&:hover::before {
+			text-decoration: none;
+			background-color: $primary;
+		}
+	}
+
+	.search-btn {
+		color: inherit;
+	}
+
+	@include media-breakpoint-down(md) {
+		position: relative;
+		flex-wrap: wrap;
+
+		.factory-search-btn {
+			position: absolute;
+			top: 7%;
+			right: 25%;
+			transform: translateX(-25%);
+		}
+
+		.nav-item .nav-link {
+			&:hover {
+				transition: 0.7s;
+			}
+		}
+
+		&.navbar-effect {
+			flex-wrap: nowrap;
+		}
+
+		.quote-btn {
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		.icons {
+			margin: 20px 0 !important;
+
+			.first-icon {
+				padding-left: 15px;
+			}
+
+			.social-icon {
+				margin-right: 15px !important;
+			}
+		}
+
+		.get-quote-btn {
+			display: none;
+		}
+
+		.quote-btn-effect {
+			display: block;
+		}
+
+		.navbar-collapse {
+			background-color: $gray-100;
+			margin-top: 0;
+			padding: 10px 20px;
+			box-shadow: 0 0 45px rgba($black, 0.15);
+			position: absolute;
+			z-index: 9999999;
+			left: 0;
+			right: 0;
+			top: 100%;
+
+			.dropdown {
+				height: 0;
+				opacity: 0;
+				overflow: hidden;
+			}
+
+			.navbar-nav {
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					border-left: 2px solid $gray-300;
+					left: 2.5px;
+					top: 16px;
+					width: 2px;
+					bottom: 16px;
+					z-index: 1;
+				}
+
+				.dropdown {
+
+					li {
+						padding-left: 10px;
+						margin-left: 15px;
+
+						&::before {
+							border-radius: 0;
+						}
+
+						@include media-breakpoint-down(md) {
+							> a {
+
+								&:hover,
+								&:active {
+									background: transparent;
+									background-color: transparent !important;
+								}
+							}
+						}
+					}
+				}
+
+				li {
+					margin: 0;
+					color: $black;
+					position: relative;
+					padding-left: 20px;
+
+					&.has-chilren {
+						&::after {
+							content: "+";
+							position: absolute;
+							right: 0;
+							top: 0;
+							color: $gray-500;
+							font-weight: 500;
+
+						}
+
+						&:hover::after {
+							content: "-";
+						}
+					}
+
+					&::before {
+						content: "";
+						left: 0;
+						position: absolute;
+						top: 50%;
+						height: 8px;
+						width: 8px;
+						border-radius: 50%;
+						transform: translateY(-50%);
+						z-index: 2;
+						background-color: $gray-300;
+					}
+
+					> a.nav-link {
+						padding: 8px 0;
+					}
+				}
+
+				li:hover .dropdown {
+					height: auto;
+				}
+			}
+		}
+	}
+
+	.navbar-nav {
+
+		li {
+			position: relative;
+
+			&:hover {
+				>.dropdown {
+					top: 100%;
+					left: 0;
+					visibility: visible;
+					opacity: 1;
+					transform: none;
+				}
+			}
+
+			.dropdown {
+				background-color: $gray-100;
+				margin: 0;
+				list-style: none;
+				width: 100%;
+				top: 95%;
+				min-width: 180px;
+				transition: all 0.6s;
+				z-index: 100;
+				padding: 0;
+
+				li {
+					a {
+						text-decoration: none;
+						color: $gray-800;
+						display: block;
+						padding: 6px;
+					}
+				}
+
+				@include media-breakpoint-up(lg) {
+					padding: 10px 0;
+					position: absolute;
+					visibility: hidden;
+					opacity: 0;
+					transform: scale(1.04) rotate(-1deg);
+					box-shadow: 0 0 18px rgba($black, 0.4);
+					background-color: $black;
+
+					.dropdown {
+						li a {
+							padding: 10px 20px;
+
+						}
+					}
+
+					li {
+						a {
+							color: $white;
+							padding: 10px 20px;
+							display: block;
+
+							&:hover {
+								background-color: theme-color("primary");
+							}
+						}
+					}
+
+				}
+
+				// A dropdown menu inside a dropdown
+				.dropdown {
+					left: 100%;
+					top: 100%;
+					top: calc(100% - 50px);
+				}
+
+				&.v02 {
+					li {
+						a {
+							&:hover {
+								background-color: theme-color("primary-blue");
+							}
+						}
+					}
+				}
+
+				&.v03 {
+					li {
+						a {
+							&:hover {
+								background-color: theme-color("primary-brown");
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*search Input*/
+.in-header-search-form {
+	visibility: hidden;
+	opacity: 0;
+	width: 280px;
+	position: absolute;
+	right: 0;
+	top: 90%;
+	padding: 15px;
+	background-color: #fff;
+	box-shadow: 0 0 20px rgba($secondary, 0.2);
+	z-index: 10;
+	transition: all 0.5s;
+
+
+	.close-btn {
+		left: -15px;
+		top: -15px;
+		border-radius: 2px;
+		cursor: pointer;
+		z-index: 2;
+		display: block;
+		height: 25px;
+		width: 25px;
+		padding: 5px;
+		color: rgb(99, 26, 33);
+		background-color: rgba($red, 0.9);
+		border: 0;
+		font-size: 16px;
+		position: absolute;
+		background-position: center;
+		opacity: 0.92;
+		outline: none;
+	}
+
+	.search-form {
+		fieldset {
+			position: relative;
+			background-color: $white;
+			border: 1px solid rgba($secondary, 0.2);
+			display: flex;
+			align-items: center;
+
+			.form-control {
+				border: none;
+				width: 100%;
+			}
+
+			input[type="search"] {
+				padding-right: 0;
+			}
+
+			button {
+				border: none;
+				background: none;
+				top: 0;
+				padding: 15px;
+				outline: 0;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		width: 100%;
+		bottom: -75px;
+	}
+}
+
+.navbar-toggler {
+	color: $black;
+	width: 55px;
+	height: 40px;
+	padding: 0;
+	align-items: center;
+	border: none;
+	font-size: 20px;
+	display: flex;
+	background-image: url(../images/icons/mobile-nav-icon.svg);
+	background-repeat: no-repeat;
+	background-size: 28px;
+	background-position: right center;
+
+	&.light {
+		background-image: url(../images/icons/mobile-nav-icon--light.svg);
+	}
+
+	&:hover {
+		cursor: pointer;
+		transition: 0.6s all;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}

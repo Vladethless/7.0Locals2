@@ -1,0 +1,232 @@
+/*
+* ------------------------------------------------------------------------------
+* Our Services / What We do / construction services
+* ------------------------------------------------------------------------------
+*/
+.services-section {
+	&.service-home {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: rgba($black, 0.88);
+			z-index: 0;
+		}
+
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	h6 {
+		margin-bottom: 10px;
+		font-size: 13px;
+	}
+
+	h1 {
+		line-height: 44px;
+		letter-spacing: 1px;
+		margin-bottom: 60px;
+	}
+
+	.single-feature {
+		i {
+			font-size: 50px;
+			color: theme-color("primary");
+			display: block;
+			line-height: 55px;
+			margin-bottom: 10px;
+		}
+
+		h3 {
+			font-size: 22px;
+			line-height: 30px;
+			margin-bottom: 0;
+			font-weight: 600;
+		}
+
+		@include media-breakpoint-down(sm) {
+			h3 {
+				font-size: 18px;
+				line-height: 22px;
+				> span {
+					display: block;
+				}
+			}
+
+			i {
+				font-size: 38px;
+				line-height: 42px;
+			}
+		}
+	}
+
+	&.v-02 {
+		position: relative;
+		background-position: center;
+		background-size: cover;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-color: theme-color("primary-blue");
+			left: 0;
+			top: 24%;
+			top: calc(24% + 60px);
+			bottom: 25%;
+			right: 70%;
+			right: calc(50% + 35.5rem);
+			z-index: 0;
+		}
+
+		.service-title {
+			font-weight: 300;
+		}
+
+		.img-wrapper {
+			position: relative;
+			z-index: 100;
+			padding: 0;
+
+			.service-img {
+				width: 100%;
+				max-height: 100%;
+				object-position: center;
+				object-fit: cover;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 5%;
+				bottom: 5%;
+				right: 5%;
+				left: 5%;
+				background: transparent;
+				z-index: 100;
+				width: 90%;
+				height: 90%;
+				border: 2px solid $white;
+			}
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 30px;
+			}
+
+
+		}
+	}
+}
+
+.services {
+	&--v-02 {
+		.service-wrapper {
+			padding: 50px 30px;
+
+			p {
+				padding: 30px 0;
+			}
+		}
+
+		.icon-wrapper {
+			img {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&--v-03 {
+		.service-wrapper {
+			h5 {
+				font-weight: 600;
+			}
+
+			p {
+				padding: 30px 15px;
+			}
+
+			.fancy-title {
+				padding-bottom: 10px;
+			}
+		}
+
+		.img-wrapper {
+			width: 100%;
+			height: 180px;
+
+			img {
+				width: 100%;
+				height: auto;
+				max-height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+}
+
+/* version 02 - khadamat plumber */
+
+.plumber-services--section {
+	padding-top: 100px;
+
+	.header-services {
+		margin-bottom: 60px;
+		justify-content: space-between;
+	}
+
+	.services {
+		.slick-active:nth-of-type(2n+1) {
+			.service {
+				background: #f8f8f8;
+			}
+		}
+
+		.service {
+			padding: 50px 25px;
+			background: #f3f3f3;
+			background-size: cover;
+			text-align: center;
+			transition: all 0.6s;
+
+			img {
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+
+		.header-services {
+			position: relative;
+			margin-bottom: 80px;
+			justify-content: center;
+
+			.prev,
+			.next {
+				position: absolute;
+				top: 120%;
+			}
+
+			.prev {
+				left: 10px;
+			}
+
+			.next {
+				right: 10px;
+			}
+		}
+	}
+}

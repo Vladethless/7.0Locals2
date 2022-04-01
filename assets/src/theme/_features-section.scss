@@ -1,0 +1,101 @@
+/*
+* -----------------------------------------------------------------------------
+* styling for experiences section (why choose us)
+* -----------------------------------------------------------------------------
+*/
+
+.section-features {
+	position: relative;
+	overflow-x: hidden;
+
+	[class^="col-"] {
+		position: static;
+	}
+
+	@include media-breakpoint-down(sm) {
+		&.section {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.experiences {
+	position: relative;
+	margin-top: -30px;
+	margin-right: -15px;
+
+	.experience {
+		flex: 0 0 50%;
+		padding: 30px 30px 0 0;
+		z-index: 1;
+
+		@include media-breakpoint-down(md) {
+			flex: 0 0 100%;
+		}
+
+		&-icon {
+			margin-right: 15px;
+			border: 2px solid theme-color("primary");
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+
+			i {
+				font-size: 40px;
+				color: theme-color("primary");
+			}
+
+			&.v02 {
+				border: 2px solid $success;
+
+				i {
+					color: $success;
+				}
+			}
+		}
+
+		&-desc {
+			p {
+				margin-bottom: 0 !important;
+				color: #727272;
+			}
+		}
+
+		&:hover {
+			.experience-icon {
+				cursor: pointer;
+				background-color: theme-color("primary");
+				transition: 0.5s;
+
+				i {
+					color: #fff;
+				}
+
+				&.v02 {
+					background-color: $success;
+				}
+			}
+
+		}
+	}
+}
+
+.plumber {
+
+	@include media-breakpoint-up(md) {
+		position: absolute;
+		top: auto;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	@include media-breakpoint-down(md) {
+		opacity: 0.2;
+	}
+
+	@include media-breakpoint-down(sm) {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,82 @@
+/*
+* ----------------------------------------------------------------------------
+* contact page - message form section
+* ----------------------------------------------------------------------------
+*/
+
+.message-form {
+	background-color: $gray-100;
+
+	.section-header {
+		margin-bottom: 50px;
+	}
+
+	.inputs-group {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+
+		.input {
+			flex: 0 0 33.3333%;
+
+			&:not(:last-child) {
+				padding-right: 30px;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		.inputs-group {
+			flex-direction: column;
+			justify-content: space-around;
+
+			.input {
+				flex: 0 0 100%;
+
+				&:not(:last-child) {
+					padding-right: 0;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+
+	&.v02 {
+		background-color: $white;
+
+		form {
+
+			.btn {
+				border: 1px solid $black;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		.ratings {
+			flex-direction: column;
+
+			span {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.rates {
+		.rate {
+			padding: 0 30px;
+			cursor: pointer;
+
+			&:not(:last-child) {
+				border-right: 1px solid $gray-200;
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			.rate {
+				padding: 0 15px;
+			}
+		}
+	}
+}

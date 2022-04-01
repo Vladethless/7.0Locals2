@@ -1,0 +1,85 @@
+/*
+* ------------------------------------------------------------------------------
+* Testimonial
+* ------------------------------------------------------------------------------
+*/
+
+.testimonial-section {
+	background-size: cover;
+
+	.item {
+		padding: 50px 0 0;
+
+		&:hover {
+			.avatar img {
+				box-shadow: 0 0 12px rgba($gray, 0.5);
+			}
+		}
+	}
+
+	.item-container {
+		padding: 60px 30px 30px 30px;
+		position: relative;
+
+		.avatar img {
+			position: absolute;
+			height: 80px;
+			width: 80px;
+			top: -40px;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 50%;
+			transition: all 0.5s;
+		}
+	}
+
+	.testimonial {
+		position: relative;
+
+		&-text {
+			font-size: 15px;
+			line-height: 1.6;
+			font-weight: 100;
+		}
+
+		.quote {
+			font-family: sans-serif;
+			color: $gray-500;
+			font-size: 60px;
+		}
+
+		.author {
+			margin-bottom: 20px;
+			p {
+				letter-spacing: 2px;
+			}
+		}
+	}
+
+	.slick-slider {
+
+		.slick-dots {
+			li {
+				background-color: $white;
+				border: 1px solid $primary;
+
+				&.slick-active {
+					background-color: $primary;
+				}
+			}
+		}
+
+		&.v02 {
+			.slick-dots {
+				li {
+					background-color: $white;
+					border: 1px solid $success;
+
+					&.slick-active {
+						background-color: $success;
+					}
+				}
+			}
+		}
+	}
+}

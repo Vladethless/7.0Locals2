@@ -1,0 +1,118 @@
+/*
+* --------------------------------------------------------------------
+* styling for the common footer section
+* --------------------------------------------------------------------
+*/
+
+.main-footer.v-01 {
+	background: linear-gradient(to right, rgba($black, 0.9), rgba($black, 0.85));
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 70px 0;
+
+	&.bg-black {
+		background: #1a1a1a;
+	}
+
+	.footer {
+		font-size: 13px;
+
+		&-info {
+			line-height: 2;
+
+			&.v02 {
+				padding: 60px 0 !important;
+			}
+		}
+
+		a,
+		p {
+			color: #bababa;
+		}
+
+		&-nav {
+			li {
+				&:not(:last-child) {
+					margin-right: 25px;
+				}
+
+				a {
+					&:hover {
+						color: theme-color("primary");
+					}
+				}
+			}
+		}
+
+		.footer-title {
+			font-size: 18px;
+
+			&::after {
+				content: ".";
+				color: theme-color("primary");
+			}
+		}
+
+		i {
+			margin-right: 5px;
+		}
+
+		.company-links {
+			li:hover a {
+				color: theme-color("primary") !important;
+			}
+		}
+
+		.socials {
+			display: flex;
+			flex-wrap: wrap;
+
+			&-icon {
+				height: 45px;
+				width: 45px;
+				font-size: 14px;
+				background-color: rgba($white, 0.1);
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				transition: all 0.4s;
+
+				i {
+					margin: 0 !important;
+				}
+
+				&:not(:last-child) {
+					margin-right: 15px;
+				}
+
+				&:hover {
+					background: theme-color("primary");
+				}
+
+				&--v02:hover {
+					background: $success !important;
+				}
+			}
+		}
+
+		&-map {
+			@include media-breakpoint-down(md) {
+				object-fit: cover;
+			}
+		}
+	}
+
+	.sub-footer {
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		li a,
+		span {
+			color: #7e7e7e;
+		}
+	}
+}

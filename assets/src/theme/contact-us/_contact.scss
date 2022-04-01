@@ -1,0 +1,59 @@
+/*
+* ----------------------------------------------------------------------------
+* contact page - contact info section
+* ----------------------------------------------------------------------------
+*/
+
+.contact-info {
+	position: relative;
+
+	.info-details {
+
+		p,
+		i {
+			color: #727272;
+			margin-bottom: 0;
+		}
+
+		padding: 100px 0;
+
+		>* {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
+		.socials-networks {
+			i {
+				font-size: 15px;
+				cursor: pointer;
+
+				&:not(:last-child) {
+					margin-right: 30px;
+				}
+
+				&:hover {
+					color: theme-color("primary");
+					transition: 0.5s;
+				}
+			}
+		}
+	}
+
+	#contact-map {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+	}
+
+	@include media-breakpoint-down(md) {
+		#contact-map {
+			position: relative !important;
+			top: 0;
+			left: 0;
+			height: 450px;
+		}
+	}
+}

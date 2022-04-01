@@ -1,0 +1,72 @@
+/*
+* ------------------------------------------------------------------------------
+* Banner Widget
+* ------------------------------------------------------------------------------
+*/
+
+.banner {
+	margin-top: -25px;
+	padding: 150px 0;
+	background-size: cover;
+	background-position: center right;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	> .container {
+		position: relative;
+		align-items: center;
+	}
+
+	.title {
+		font-size: 50px;
+		font-weight: 100;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding: 100px 0;
+
+		.title {
+			font-size: 34px;
+			margin-bottom: 15px;
+			flex: 0 0 100%;
+		}
+	}
+
+	.breadcrumb-container {
+		position: relative;
+	}
+
+	.breadcrumb {
+		background: none;
+		margin-bottom: 0;
+		align-items: center;
+
+		a {
+			color: $white;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		&-item {
+			&.active {
+				a {
+					color: #bababa;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,149 @@
+/*
+* ----------------------------------------------------------------------------
+* Slider
+* ----------------------------------------------------------------------------
+*/
+.hero.v-05 {
+	$left-side-width-lg: 50%;
+	position: relative;
+
+	.main-slider-nav-wrapper {
+		position: absolute;
+		z-index: 1;
+		width: $left-side-width-lg;
+		left: 0;
+		right: $left-side-width-lg;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		bottom: 40px;
+
+		nav {
+			max-width: 800px;
+			width: 100%;
+			padding: 0 60px;
+
+			.slick-arrow {
+				border: none;
+				background: none;
+				padding: 0;
+				overflow: hidden;
+				outline: 0;
+				position: relative;
+				span {
+					padding: 20px;
+					display: block;
+					background-color: $white;
+					transition: opacity 0.6s;
+					opacity: 0.5;
+
+					i {
+						opacity: 1;
+					}
+
+					&::before {
+						content: "";
+						display: block;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						width: 20px;
+						background-color: inherit;
+						transform: skew(-10deg);
+						z-index: -1;
+					}
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+
+				&.slider-prev-btn {
+					padding-right: 15px;
+
+					span {
+						&::before {
+							left: 60%;
+						}
+					}
+				}
+
+				&.slider-next-btn {
+					padding-left: 15px;
+
+					span {
+						&::before {
+							right: 60%;
+						}
+					}
+				}
+			}
+			@include media-breakpoint-down(md) {
+				padding: 0 20px;
+			}
+		}
+	}
+
+	.slide {
+		position: relative;
+		height: 700px;
+		background-size: cover;
+		background-position: center;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: $left-side-width-lg;
+			top: 0;
+			bottom: 0;
+			background: $black;
+			opacity: 0.7;
+
+		}
+
+		@include media-breakpoint-down(md) {
+			max-height: 85vh;
+
+			&::before {
+				right: 0;
+			}
+		}
+
+		.content-wrapper {
+			position: absolute;
+			z-index: 1;
+			width: $left-side-width-lg;
+			left: 0;
+			right: $left-side-width-lg;
+			top: 0;
+			bottom: 0;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+
+			@include media-breakpoint-up(lg) {
+				.content {
+					max-width: 800px;
+					padding: 0 60px;
+				}
+			}
+
+			.title {
+				font-size: 70px;
+			}
+
+			@include media-breakpoint-down(md) {
+				width: 100%;
+				.content {
+					width: 100%;
+					padding: 0 20px;
+					.title {
+						font-size: 50px;
+					}
+				}
+			}
+		}
+	}
+}

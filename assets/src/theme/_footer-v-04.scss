@@ -1,0 +1,54 @@
+/*
+* ----------------------------------------------------------------------------
+* carpenter page - footer section
+* ----------------------------------------------------------------------------
+*/
+
+.main-footer.v-04 {
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.footer-copyright {
+		span {
+			color: theme-color("primary-brown");
+		}
+	}
+
+	li > a {
+		color: $gray-500;
+		&:hover {
+			color: theme-color("primary-brown");
+		}
+	}
+
+	.socials {
+		display: flex;
+
+		&-icon {
+			height: 45px;
+			width: 45px;
+			background-color: $gray;
+			border-radius: 50%;
+			margin-top: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			transition: all 0.4s;
+			color: rgba($color: $white, $alpha: 0.8);
+
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+
+			&:hover {
+				background: theme-color("primary-brown");
+				transition: 0.5s;
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 20px;
+		}
+	}
+}

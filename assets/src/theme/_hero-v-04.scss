@@ -1,0 +1,64 @@
+/*
+* ----------------------------------------------------------------------------
+* Hero v-04 - On plumber
+* ----------------------------------------------------------------------------
+*/
+
+.hero.v-04 {
+	position: relative;
+	margin-top: -30px;
+
+	.slick-slider {
+		.slick-arrow > span {
+			background-color: $white;
+
+			&:hover {
+				background-color: $black;
+				color: $white;
+			}
+		}
+	}
+
+	.slick-slide {
+		height: 640px;
+		background-size: cover;
+
+		.slide {
+			height: 640px;
+			padding-top: 40px;
+
+			.container {
+				display: flex;
+				align-items: center;
+				height: 100%;
+			}
+
+			.row {
+				flex: 0 0 100%;
+			}
+
+			.main-img {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	.title {
+		color: $white;
+		font-weight: $headings-font-weight;
+		line-height: $headings-line-height;
+
+		@include media-breakpoint-up(md) {
+			font-size: 60px;
+		}
+
+		@include media-breakpoint-up(sm) {
+			font-size: 50px;
+		}
+	}
+
+	.description {
+		color: $white !important;
+	}
+
+}

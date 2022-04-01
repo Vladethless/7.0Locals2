@@ -1,0 +1,168 @@
+/*
+* --------------------------------------------------------------------
+* Carpenter Header
+* --------------------------------------------------------------------
+*/
+.main-header.v-03 {
+	position: relative;
+	width: 100%;
+	z-index: 3;
+	font-family: $headings-font-family;
+
+	.main-header--top-bar {
+		line-height: 1;
+		position: relative;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		font-size: 13px;
+		background: $black;
+		z-index: 10;
+
+		@include media-breakpoint-up(lg) {
+			&::after {
+				content: "";
+				background: theme-color("primary-brown");
+				height: 100%;
+				left: 75%;
+				left: calc(50% + 28.2rem);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				z-index: -1;
+				overflow: hidden;
+			}
+		}
+
+		@include media-breakpoint-only(lg) {
+			&::after {
+				content: "";
+				height: 100%;
+				left: calc(50% + 22rem);
+			}
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding-right: 0;
+			> span {
+				display: flex;
+				font-size: 13px;
+				margin-bottom: 10px;
+			}
+		}
+
+		.top-right-bar {
+			position: relative;
+			z-index: 10;
+
+			@include media-breakpoint-down(md) {
+				display: flex;
+				font-size: 12px;
+				background: transparent;
+				width: 100%;
+				justify-content: center;
+
+				.quote-btn {
+					width: 30vw;
+					height: 30px;
+					font-size: 12px;
+					line-height: 25px;
+					text-align: center;
+					padding: 0;
+				}
+			}
+		}
+
+		.top-bar-contacts {
+			> span {
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+
+				> i {
+					display: inline-block;
+					margin-right: 6px;
+					color: theme-color("primary-brown");
+				}
+			}
+		}
+
+		.icon-wrapper {
+			padding: 10px 0;
+
+			a i {
+				color: $white;
+			}
+
+			@include media-breakpoint-down(md) {
+				background: transparent;
+				a i {
+					background: transparent;
+				}
+			}
+		}
+	}
+
+	/* Navigation  */
+	.main-navbar {
+		&.navbar {
+			.logo {
+				img {
+					width: 100%;
+					height: auto;
+					max-width: 170px;
+				}
+			}
+			.quote-btn {
+				color: $white;
+
+				&:hover {
+					background: transparent;
+					color: theme-color("primary-brown");
+					transition: 0.5s;
+				}
+			}
+
+			.navbar-nav {
+				margin: 0 auto;
+				> .nav-item {
+					&:not(:last-child) {
+						margin-right: 35px;
+					}
+
+					> a {
+						position: relative;
+						color: inherit;
+						font-weight: 600;
+
+						&:hover {
+							color: theme-color("primary-brown");
+							transition: 0.5s;
+						}
+					}
+				}
+
+				@include media-breakpoint-up(lg) {
+					.nav-item > a {
+						padding: 1.6rem 0;
+
+						&.active > a {
+							&::after {
+								content: "";
+								background: theme-color(
+									"primary-brown"
+								);
+								position: absolute;
+								width: 100%;
+								bottom: 0;
+								left: 0;
+								height: 3px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

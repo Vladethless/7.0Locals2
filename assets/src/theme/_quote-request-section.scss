@@ -1,0 +1,72 @@
+/*
+* ----------------------------------------------------------------------
+* styling for request a blog section (index)
+* ----------------------------------------------------------------------
+*/
+
+.quote-request-form {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.container {
+		position: relative;
+		.row > [class^="col-"] img {
+			width: auto;
+			height: 100%;
+			object-fit: contain;
+			object-position: bottom center;
+		}
+	}
+
+	.contact-form-container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		z-index: 1;
+
+		.contact-form {
+			padding-top: 50px;
+		}
+	}
+
+
+	&.section {
+		.form-img-container {
+			position: absolute;
+			padding-top: 0 !important;
+			top: -10px;
+			bottom: -100px;
+			z-index: 0;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		display: flex;
+
+		&.section {
+			.form-img-container {
+				position: absolute;
+				padding-top: 0 !important;
+				top: -10px;
+				bottom: -80px;
+				z-index: 0;
+			}
+		}
+
+		.section-header {
+			z-index: 2;
+			position: relative;
+		}
+
+		.form-img-container {
+			opacity: 0.1;
+			text-align: center;
+		}
+
+		.contact-form-container {
+			z-index: 2;
+		}
+
+	}
+}

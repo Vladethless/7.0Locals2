@@ -1,0 +1,58 @@
+/*
+* ------------------------------------------------------------------------------
+* Partners section
+* ------------------------------------------------------------------------------
+*/
+.partners-section {
+	background: $gray-100;
+
+	.item-container {
+		text-align: center;
+		padding: 30px 0;
+		box-shadow: 0 0 1px $gray-500;
+
+		@include media-breakpoint-up(lg) {
+			padding: 50px 0;
+		}
+
+
+	}
+
+	img {
+		transition: opacity 0.5s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&.v-02 {
+		background: theme-color("primary-blue");
+
+		img {
+			opacity: 0.7;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.v-03 {
+		img {
+			opacity: 0.54;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		.partners {
+			> div {
+				margin: 10px 0;
+			}
+		}
+	}
+}

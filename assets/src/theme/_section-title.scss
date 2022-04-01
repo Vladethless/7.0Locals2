@@ -1,0 +1,30 @@
+/*
+* ----------------------------------------------------------------------------
+* sections header && titles stylings
+* ----------------------------------------------------------------------------
+*/
+
+.section-title,
+.section-header {
+	display: block;
+
+	h1,
+	.h1 {
+		font-weight: 600;
+	}
+}
+
+.header-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	@include media-breakpoint-up(sm) {
+		justify-content: space-between;
+		flex-direction: row;
+		text-align: left;
+	}
+}

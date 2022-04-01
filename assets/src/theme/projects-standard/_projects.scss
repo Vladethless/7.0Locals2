@@ -1,0 +1,42 @@
+/*
+* ---------------------------------------------------------------------------
+* styling for projects standard page
+* ---------------------------------------------------------------------------
+*/
+
+.projects-v02 {
+	display: grid;
+	margin-top: 50px;
+
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 30px;
+
+	.project {
+		position: relative;
+		padding: 20px;
+		height: 350px;
+		cursor: pointer;
+
+		.overlay {
+			opacity: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			background-color: rgba($black, $alpha: 0.7);
+			transition: all 0.6s;
+		}
+
+		&.project-background {
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		&:hover {
+			.overlay {
+				opacity: 1;
+			}
+		}
+	}
+}

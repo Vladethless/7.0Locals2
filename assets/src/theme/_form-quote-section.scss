@@ -1,0 +1,99 @@
+/*
+* ----------------------------------------------------------------------------
+* carpenter page - quote section
+* ----------------------------------------------------------------------------
+*/
+
+.form-quote-section {
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.content-wrapper {
+		background: rgba($black, 0.6);
+		width: 65%;
+		max-width: 100%;
+		padding: 100px 50px;
+		color: $white;
+
+		.section-header {
+			text-align: center;
+			margin-bottom: 80px;
+		}
+
+		.subtitle {
+			font-size: 15px;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+
+			&.top {
+				margin-bottom: 5px;
+			}
+		}
+
+		.header-underline {
+			position: relative;
+
+			&::after {
+				content: "";
+				width: 60px;
+				height: 3px;
+				background-color: $white;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -30px;
+			}
+		}
+	}
+
+	form {
+		.form-control {
+			border: 1px solid $white;
+
+			&::placeholder {
+				color: $white;
+			}
+		}
+	}
+
+	.fancy-title {
+		padding-bottom: 20px;
+	}
+
+	&.v-success {
+		.content-wrapper {
+			background: rgba($success, 0.8);
+		}
+	}
+
+	&.v-primary {
+		.content-wrapper {
+			background: rgba($primary, 0.85);
+		}
+
+		form {
+			.btn {
+				background-color: $black;
+			}
+		}
+	}
+
+
+	@include media-breakpoint-down(md) {
+		.content-wrapper {
+			width: 80%;
+			padding: 80px 50px;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		.container {
+			padding-right: 0;
+			padding-left: 0;
+		}
+		.content-wrapper {
+			width: 100%;
+			padding: 80px 25px;
+		}
+	}
+}

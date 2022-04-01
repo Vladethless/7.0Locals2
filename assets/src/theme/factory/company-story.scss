@@ -1,0 +1,76 @@
+/*
+* ----------------------------------------------------------------------------
+* Factory page - company story section
+* ----------------------------------------------------------------------------
+*/
+
+.company-story {
+	position: relative;
+	.story {
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 20px;
+
+		&-overlay {
+			background-color: rgba(theme-color("primary"), 0.9);
+			height: 100%;
+			width: 100%;
+			padding: 60px;
+
+			.content {
+				border: 8px solid $black;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+
+				a {
+					margin-bottom: 30px;
+				}
+
+				.text {
+					text-transform: uppercase;
+					font-size: 16px;
+					letter-spacing: 2px;
+					font-weight: 600;
+					color: #000;
+				}
+			}
+
+			@include media-breakpoint-down(md) {
+				padding: 30px;
+				.content {
+					padding: 20px;
+				}
+			}
+		}
+
+	}
+
+	.text-content {
+		max-width: 700px;
+
+		p {
+			line-height: 1.8;
+		}
+	}
+
+	.item-container .title {
+		font-weight: 300;
+	}
+	@include media-breakpoint-up(md) {
+		.item-container {
+			padding-left: 100px;
+			padding-right: 0;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		.img-wrapper {
+			margin-top: 50px;
+		}
+		.story {
+			height: 400px;
+		}
+	}
+}

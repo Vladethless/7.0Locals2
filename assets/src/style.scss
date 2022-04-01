@@ -1,0 +1,178 @@
+/*
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ Khadamat HTML Template
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+	- Desc           : Main Template CSS
+	- Date           : 10/10/2020
+	- Author         : OTOD
+	- Author URI     : https://themeforest.net/user/otod
+	- Email          : info@otod.io
+
+   ---------------------------------------------------------------------------
+   Table of content
+   ---------------------------------------------------------------------------
+   01. General Styles
+      - Section title
+      - Porfolio filter buttons
+      - Inner page title banner
+   02. Components
+   03. Default navigation styles
+   04. Slick slider resets
+   05. Headers
+      - Footer v-01
+      - Footer v-02
+      - Footer v-03
+      - Footer v-04
+      - Footer v-05
+   06. Hero Sliders
+   07. Page Sections
+       - About us sections
+       - About the comapany (Carpenter)
+       - Services
+       - Portfolio
+       - Our projects
+       - Testimonials
+       - Quote form
+       - News/Blog
+       - Partners logo
+       - Features
+       - Newsletter
+       - Why choose us
+       - Appointment form
+       - Cleaning services porfolio
+       - Carpenter services
+       - Carpenter porfolio
+       - Callback
+       - Factory services
+       - Factory company story
+       - Factory quote form
+       - Counters
+       - Portfolio v-03
+       - Team
+       - About us V-03
+       - Project masonry
+       - Standard project
+   08. Shop pages
+   09. 404 Page
+   10. Contact Page
+   11. Footers
+      - Footer v-01
+      - Footer v-02
+      - Footer v-03
+      - Footer v-04
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+@import "bootstrap/functions";
+@import "variables";
+@import "bootstrap/mixins";
+
+/* ========================================================================== *\
+    01. GENERAL
+\* ========================================================================== */
+
+@import "theme/general";
+@import "theme/section-title";
+@import "theme/portfolio-filters";
+@import "theme/page-title-banner";
+
+/* ========================================================================== *\
+   02. COMPONENTS
+\* ========================================================================== */
+
+@import "theme/components";
+
+/* ========================================================================== *\
+   03. DEFAULT NAVIGATION
+\* ========================================================================== */
+
+@import "theme/navbar-defaults";
+
+/* ========================================================================== *\
+   04. DEFAULT SLICK SLIDER
+\* ========================================================================== */
+
+@import "theme/slick-slider";
+
+/* ========================================================================== *\
+   05. HEADERS
+\* ========================================================================== */
+
+@import "theme/main-header-v-01";
+@import "theme/main-header-v-02";
+@import "theme/main-header-v-03";
+@import "theme/main-header-v-04";
+@import "theme/main-header-v-05";
+
+/* ========================================================================== *\
+   06. HERO SLIDERS
+\* ========================================================================== */
+
+@import "theme/hero-v-01"; // Construction
+@import "theme/hero-v-02"; // Cleaning services
+@import "theme/hero-v-03"; // Carpenter
+@import "theme/hero-v-04"; // Plumber
+@import "theme/hero-v-05"; // Factory
+
+/* ========================================================================== *\
+   07. PAGE SECTIONS
+\*  ========================================================================= */
+
+@import "theme/about-section";
+@import "theme/carpenter/about-company.scss"; //Carpenter
+@import "theme/services-section";
+@import "theme/portfolio-section";
+@import "theme/our-projects-section";
+@import "theme/testimonial-section";
+@import "theme/form-quote-section";
+@import "theme/quote-request-section.scss";
+@import "theme/news-section";
+@import "theme/partners-section";
+@import "theme/features-section";
+@import "theme/newsletter";
+@import "theme/why-choose-us-section";
+@import "theme/cleaning-service/appointment-form"; // Cleaning services
+@import "theme/cleaning-service/works"; //Cleaning services
+@import "theme/carpenter/services";
+@import "theme/carpenter/works"; // Carpenter works/Portoflio
+@import "theme/carpenter/callback"; // Carpenter callback
+@import "theme/factory/what-we-offer"; // Factory
+@import "theme/factory/company-story.scss"; // Factory
+@import "theme/factory/quote.scss";
+@import "theme/statistics-section";
+@import "theme/portfolio-v-03";
+@import "theme/teams-section";
+@import "theme/about-v03/about";
+@import "theme/single-blog/*";
+@import "theme/projects-masonry/*";
+@import "theme/projects-standard/*";
+@import "theme/projects-tile/*";
+
+/* ========================================================================== *\
+   08. SHOP
+\*  ========================================================================= */
+
+@import "theme/shop/shop";
+@import "theme/shop/related-product";
+@import "theme/shop/cart";
+
+/* ========================================================================== *\
+   09. 404 Page
+\*  ========================================================================= */
+
+@import "theme/not-found";
+
+/* ========================================================================== *\
+   10. CONTACT PAGE
+\*  ========================================================================= */
+
+@import "theme/contact-us/*.scss";
+
+/* ========================================================================== *\
+   11. FOOTERS
+\*  ========================================================================= */
+@import "theme/footer-v-01";
+@import "theme/footer-v-02";
+@import "theme/footer-v-03";
+@import "theme/footer-v-04";

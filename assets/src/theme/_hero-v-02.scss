@@ -1,0 +1,64 @@
+/*
+* ----------------------------------------------------------------------------
+* Hero v-02 - Cleaning services
+* ----------------------------------------------------------------------------
+*/
+
+.hero {
+
+	/* Hero 2 on Cleaning Services Page */
+	&.v-02 {
+		background-color: rgba($gray, 0.1);
+
+		.slick-slider {
+			.slick-arrow > span {
+				background-color: $white;
+
+				&:hover {
+					background-color: theme-color("primary-blue");
+					color: $white;
+				}
+			}
+		}
+
+		.slide {
+			background-size: cover;
+			background-position: center;
+			height: 60vh;
+			min-height: 600px;
+
+			> .container {
+				height: 100%;
+				display: flex;
+				align-items: center;
+
+				.row {
+					width: 100%;
+				}
+			}
+
+
+			@include media-breakpoint-down(md) {
+				height: 80vh;
+			}
+
+		}
+
+		.title {
+			line-height: 1.12;
+			letter-spacing: 2px;
+			font-weight: 300;
+			font-size: 70px;
+
+			@include media-breakpoint-down(sm) {
+				font-size: 50px;
+			}
+		}
+
+		.description {
+			line-height: 1.7;
+			color: #4c4c4c;
+		}
+
+	}
+}

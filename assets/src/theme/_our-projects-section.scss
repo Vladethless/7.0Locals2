@@ -1,0 +1,17 @@
+.section-projects {
+	.section-header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	@include media-breakpoint-down(md) {
+		.section-header {
+			justify-content: center;
+		}
+
+		.header-container {
+			text-align: center;
+		}
+	}
+}

@@ -2777,6 +2777,7 @@ article p:last-child {
   max-width: 100%;
   padding-top: 100px;
   box-sizing: border-box;
+  background-image: url(../images/index_1.jpg);
 }
 
 .hero.v-01 .slick-slider .slide>.container {
@@ -3311,10 +3312,11 @@ article p:last-child {
   margin-top: 30px;
 }
 
-.section-about .counter-box h3 {
-  font-size: 36px;
-  line-height: 30px;
+.section-about .counter-box .like_h3 {
+  font-size: 30px;
+  line-height: 20px;
   font-weight: 500;
+  color: #000;
 }
 
 .section-about .counter-box p {
@@ -3442,7 +3444,7 @@ article p:last-child {
   font-size: 13px;
 }
 
-.services-section h1 {
+.services-section h2 {
   line-height: 44px;
   letter-spacing: 1px;
   margin-bottom: 60px;
@@ -4226,7 +4228,14 @@ article p:last-child {
   margin-bottom: 0 !important;
   color: #727272;
 }
-
+.experiences .experience-desc h3 {
+  font-size: 20px;
+  margin-bottom: 0 !important;
+  color: #000000;
+}
+.work-title{
+  font-size: 20px;
+}
 .experiences .experience:hover .experience-icon {
   cursor: pointer;
   background-color: #feb300;
@@ -5217,9 +5226,16 @@ article p:last-child {
 .stats .stat {
   padding: 50px 0;
 }
+.customer_p{
+  font-size: 1.09375rem;
+  font-weight: 500;
+  line-height: 0.8;
+}
 
-.stats .stat h1 {
+.stats .stat .like_p {
   line-height: 1.1;
+  font-size: 38px;
+  font-weight: 600;
 }
 
 @media (max-width: 991.98px) {
@@ -5452,6 +5468,11 @@ article p:last-child {
 .section-about .about-content .counter p {
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+.section-about .about-content .counter .like_p{
+ font-size: 30px;
+ color: #feb300;
+ font-weight: 600;
 }
 
 .section-about .img-worker img {

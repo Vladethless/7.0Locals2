@@ -4355,7 +4355,6 @@ article p:last-child {
 .why-us-section .video-placeholder .intro-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(171, 116, 66, 0.95);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4380,7 +4379,7 @@ article p:last-child {
 }
 
 .why-us-section .video-placeholder .intro-overlay.v02 {
-  background-color: rgba(254, 179, 0, 0.9);
+  background-image: url();
 }
 
 @media (max-width: 991.98px) {
@@ -5215,7 +5214,6 @@ article p:last-child {
 .stats .video-img .play-icon {
   width: 100%;
   height: 100%;
-  background-color: rgba(254, 179, 0, 0.8);
   cursor: pointer;
 }
 

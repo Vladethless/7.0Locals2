@@ -2777,7 +2777,7 @@ article p:last-child {
   max-width: 100%;
   padding-top: 100px;
   box-sizing: border-box;
-  background-image: url(../images/index_1.jpg);
+  background-image: url(../images/index_2.jpg);
 }
 
 .hero.v-01 .slick-slider .slide>.container {
@@ -3421,6 +3421,7 @@ article p:last-child {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url(../images/what_we.jpg);
 }
 
 .services-section.service-home::before {
@@ -3430,7 +3431,7 @@ article p:last-child {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.88);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 0;
 }
 
@@ -3450,11 +3451,8 @@ article p:last-child {
   margin-bottom: 60px;
 }
 
-.services-section .single-feature i {
-  font-size: 50px;
-  color: #feb300;
-  display: block;
-  line-height: 55px;
+.services-section .single-feature i img {
+  width: 100px;
   margin-bottom: 10px;
 }
 

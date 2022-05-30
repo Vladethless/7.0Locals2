@@ -3455,7 +3455,11 @@ article p:last-child {
   width: 100px;
   margin-bottom: 10px;
 }
-
+.py-2 span{
+  color: #feb300!important;
+  font-size: 1.3125rem;
+  font-weight: 600!important;
+}
 .services-section .single-feature h3 {
   font-size: 22px;
   line-height: 30px;
@@ -5460,15 +5464,23 @@ article p:last-child {
 .section-about .about-content .counter h1 {
   color: #feb300;
 }
-
+.main_h1{
+ color: #000;
+}
+.main_h1 span{
+  color: #feb300;
+ }
 .section-about .about-content .counter p {
   text-transform: uppercase;
+  color: #727272;
+  font-weight: 500;
   letter-spacing: 1.5px;
 }
 .section-about .about-content .counter .like_p{
- font-size: 30px;
  color: #feb300;
- font-weight: 600;
+ font-size: 30px;
+ line-height: 20px;
+ font-weight: 500;
 }
 
 .section-about .img-worker img {
